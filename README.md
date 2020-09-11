@@ -1,6 +1,6 @@
 # LeetCode
 ``` diff
-+ Won't be the best but will be the better
-! Please never give up
++ Won't be the BEST but will be the BETTER!
+! PLEASE NEVER GIVE UP!
 ```
 
