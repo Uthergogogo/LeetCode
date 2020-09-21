@@ -14,3 +14,12 @@
     res = nn
     nn = []
 ```
+```python
+# 以下三行可以写作一行
+"""
+nn.append(curr)
+res = nn
+nn = []
+"""
+res = [i + j for i in res for j in temp]
+```
