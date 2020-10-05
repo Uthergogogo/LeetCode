@@ -8,4 +8,8 @@
     也是对门进行dfs 但不用将其加入到deque中了
     如果遇到不满足条件（超出范围/rooms[r][c]<val 说明是墙/已经找到更优解）则return
     否则更新val 并dfs(r+dr, c+dc, val+1)
-    但是！为什么r, c = r+dr, c+dc dfs(r, c)不行, dfs(r+dr, c+dc)可以呢？？？
+    
+#### 注意
+    一定要写成dfs(r+dr, c+dc, val+1)
+    不能写成r, c = r+dr, c+dc -> dfs(r, c, val+1)
+    因为这样的话return后返回的点不是应该返回的点了 有的点会遍历不到
