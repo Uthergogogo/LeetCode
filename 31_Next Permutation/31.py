@@ -15,4 +15,3 @@ def nextPermutation(nums):
     nums.sort()
 
 print(nextPermutation([1, 8, 9, 7, 6, 5, 4]))
-prtttt
