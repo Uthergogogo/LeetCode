@@ -1,4 +1,14 @@
 from collections import Counter
+from time import perf_counter
+# create a decorator
+def cost_time(func):
+    def wrapper(nums):
+        start = perf_counter()
+        func(nums)
+        end = perf_counter()
+        print(f"cost time: {    end-start}")
+        return func(nums)
+    return wrapper
 # count
 def majorityElement(nums):
     nums.sort()
@@ -25,6 +35,7 @@ def majorityElement2(nums):
     return max(count.keys(), key=count.get)
 
 # sort
+@cost_time  # use decorator to compute performance time
 def majorityElement3(nums):
     nums.sort()
     needed_length = len(nums)//2
@@ -42,8 +53,6 @@ def majorityElement4(nums):
             vote -= 1
 
     return most
-
-
 print(majorityElement([3, 2, 3]))
 print(majorityElement2([3, 2, 3]))
 print(majorityElement3([3, 2, 3]))
